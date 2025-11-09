@@ -27,7 +27,119 @@
     </nav>
 
      <main>
-         <section id="formulaire"></section>
+         <section id="formulaire">
+          <h2>Créer mon CV</h2>
+          <p>Remplissez les champs ci-dessous pour générer votre CV personnalisé.</p>
+          
+          <form name="form" method="post" action="#">
+          
+            <fieldset>
+              <legend>Informations Personnelles</legend>
+          
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required placeholder="Ex : Foulen"><br><br>
+          
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required placeholder="Ex : Flen"><br><br>
+          
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="email" required placeholder="Ex : FlenbenFoulen@gmail.com"><br><br>
+          
+              <label for="numtel">Numéro de Téléphone</label>
+              <input type="tel" id="numtel" name="numtel" required placeholder="Ex : +216 77 777 777"><br><br>
+          
+              <label for="adresse">Adresse</label>
+              <input type="text" id="adresse" name="adresse" placeholder="Ex : Rue Bourguiba"><br><br>
+          
+              <label for="codepostal">Code postal</label>
+              <input type="number" id="codepostal" name="codepostal" placeholder="Ex : 7050"><br><br>
+          
+              <label for="ville">Ville</label>
+              <input type="text" id="ville" name="ville" placeholder="Ex : Tunis"><br><br>
+          
+              <label for="date_naiss">Date de naissance</label>
+              <input type="date" id="date_naiss" name="date_naiss"><br><br>
+          
+              <label for="lieu_naiss">Lieu de naissance</label>
+              <input type="text" id="lieu_naiss" name="lieu_naiss" placeholder="Ex : Tunis"><br><br>
+          
+              <label for="sexe">Sexe</label>
+              <input type="radio" name="sexe" id="homme" value="homme"> Homme
+              <input type="radio" name="sexe" id="femme" value="femme"> Femme <br><br>
+          
+              <label for="nationalite">Nationalité</label>
+              <input type="text" name="nationalite" id="nationalite" placeholder="Ex : Tunisienne"><br><br>
+          
+              <label for="etatcivil">État civil</label>
+              <input type="radio" name="etatcivil" id="celibataire" value="Célibataire"> Célibataire
+              <input type="radio" name="etatcivil" id="marie" value="Marié(e)"> Marié(e)
+              <input type="radio" name="etatcivil" id="divorce" value="Divorcé(e)"> Divorcé(e)
+              <input type="radio" name="etatcivil" id="veuf" value="Veuf(ve)"> Veuf(ve) <br><br>
+          
+              <label for="github">GitHub</label>
+              <input type="url" name="github" id="github" placeholder="https://github.com/votrenom">
+            </fieldset>
+          
+            <fieldset>
+              <legend>Titre professionnel & Description</legend>
+          
+              <label for="titre">Titre professionnel</label>
+              <input type="text" id="titre" name="titre" required placeholder="Ex : Développeur Web"><br><br>
+          
+              <label for="description_titre">Description</label>
+              <textarea id="description_titre" name="description_titre" rows="4" maxlength="300"
+                placeholder="Commencez à rédiger ici ..."></textarea>
+            </fieldset>
+          
+            <fieldset>
+              <legend>Formation</legend>
+          
+              <label for="formation">Formation</label>
+              <input type="text" id="formation" name="formation" required placeholder="Ex : Licence en Informatique"><br><br>
+          
+              <label for="etablissement">Établissement</label>
+              <input type="text" id="etablissement" name="etablissement" required placeholder="Ex : FST Tunis"><br><br>
+          
+              <label for="ville_formation">Ville</label>
+              <input type="text" id="ville_formation" name="ville_formation" placeholder="Ex : Tunis"><br><br>
+          
+              <label for="date_debut">Date de début</label>
+              <input type="date" id="date_debut" name="date_debut"><br><br>
+          
+              <label for="date_fin">Date de fin</label>
+              <input type="date" id="date_fin" name="date_fin"><br><br>
+          
+              <label for="description_formation">Description</label>
+              <textarea id="description_formation" name="description_formation" rows="4"
+                placeholder="Décrivez votre formation, vos cours principaux ou vos projets..."></textarea><br><br>
+            </fieldset>
+          
+            <fieldset>
+              <legend>Expérience professionnelle</legend>
+          
+              <label for="poste">Poste</label>
+              <input type="text" id="poste" name="poste" placeholder="Ex : Développeur Web Junior"><br><br>
+          
+              <label for="entreprise">Nom de l’entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" placeholder="Ex : Société X"><br><br>
+          
+              <label for="ville_experience">Ville</label>
+              <input type="text" id="ville_experience" name="ville_experience" placeholder="Ex : Tunis"><br><br>
+          
+              <label for="date_debut_experience">Date de début</label>
+              <input type="date" id="date_debut_experience" name="date_debut_experience"><br><br>
+          
+              <label for="date_fin_experience">Date de fin</label>
+              <input type="date" id="date_fin_experience" name="date_fin_experience"><br><br>
+          
+              <label for="description_experience">Description</label>
+              <textarea id="description_experience" name="description_experience" rows="4"
+                placeholder="Décrivez vos missions, responsabilités ou projets réalisés..."></textarea><br><br>
+            </fieldset>
+          
+          
+          </form>
+         </section>
          <section id="apercu"></section>
      </main>
 
