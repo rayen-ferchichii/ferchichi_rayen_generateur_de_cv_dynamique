@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Générateur de CV dynamique</title>
 </head>
 
@@ -136,6 +137,60 @@
               <textarea id="description_experience" name="description_experience" rows="4"
                 placeholder="Décrivez vos missions, responsabilités ou projets réalisés..."></textarea><br><br>
             </fieldset>
+          <fieldset>
+            <legend>Compétences</legend>
+            <label for="competence">Compétence</label>
+            <input type="text" id="competence" name="competence" required
+              placeholder="Ex : Développement Web, Réseaux, Gestion de projet"> <br><br>
+          
+            <label for="niveau">Niveau</label>
+            <input type="text" id="niveau" name="niveau" required placeholder="Ex : Débutant, Intermédiaire, Avancé, Expert">
+            <br><br>
+          
+            <label for="certification">Certification</label>
+            <input type="text" id="certification" name="certification" placeholder="Ex : Cisco CCNA, Google Cloud, TOEIC">
+            <br><br>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Langues</legend>
+            <label for="langue">Langue</label>
+            <input type="text" id="langue" name="langue" required placeholder="Ex : Français, Anglais, Arabe"> <br><br>
+          
+            <label for="niveau_langue">Niveau</label>
+            <select id="niveau_langue" name="niveau_langue" required>
+              <option value="">-- Sélectionnez un niveau --</option>
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+              <option value="B1">B1</option>
+              <option value="B2">B2</option>
+              <option value="C1">C1</option>
+              <option value="C2">C2</option>
+            </select> <br><br>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Soft Skills</legend>
+            <label><input type="checkbox" name="soft_skills" value="Communication"> Communication</label>
+            <label><input type="checkbox" name="soft_skills" value="Travail en équipe"> Travail en équipe</label>
+            <label><input type="checkbox" name="soft_skills" value="Adaptabilité"> Adaptabilité</label>
+            <label><input type="checkbox" name="soft_skills" value="Créativité"> Créativité</label>
+            <label><input type="checkbox" name="soft_skills" value="Leadership"> Leadership</label>
+            <label><input type="checkbox" name="soft_skills" value="Esprit critique"> Esprit critique</label>
+            <label><input type="checkbox" name="soft_skills" value="Résolution de problèmes"> Résolution de problèmes</label>
+            <label><input type="checkbox" name="soft_skills" value="Gestion du temps"> Gestion du temps</label>
+            <label><input type="checkbox" name="soft_skills" value="Empathie"> Empathie</label>
+            <label><input type="checkbox" name="soft_skills" value="Sens des responsabilités"> Sens des responsabilités</label>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Centres d'intérêt</legend>
+            <label for="interet">Centre d'intérêt</label>
+            <input type="text" id="interet" name="interet" placeholder="Ex : Sport, Lecture, Voyage, Musique">
+          </fieldset>
+  
+          
+          
           
           
           </form>
