@@ -16,6 +16,23 @@ header {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
 }
+header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  animation: agrandir 1.5s ease-in-out infinite alternate;
+}
+header p {
+  margin-top: 15px;
+  animation: inclinaison 1.5s ease-in-out infinite alternate;
+}
+@keyframes agrandir {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.1); } 
+}
+@keyframes inclinaison{
+  0%   { transform: skewX(0deg); }
+  100% { transform: skewX(25deg); } 
+}
 nav {
   background: #ffdc7c;
   text-align: center;
@@ -37,6 +54,10 @@ nav a {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+nav a:hover {
+  color: #9340ff; 
+  border-bottom: 5px solid #9340ff; 
+}
 main {
   display: flex;
   justify-content: space-between;
@@ -53,6 +74,55 @@ main {
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
+#formulaire:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-15px);
+}
+#formulaire h2 {
+  color: #576129;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+#formulaire p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+fieldset {
+  border: 2px solid #c5c5c5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+fieldset:hover {
+  background: #fff2e6;
+  transform: scale(1.02);
+  border-color: #000000;
+}
+legend {
+  font-weight: bold;
+  color: cadetblue;
+}
+label {
+  font-weight: bold;
+  color: #661919;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  transition: all 0.3s transform 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #ff9a76;
+  background: #fff9f5;
+  outline: none;
+  transform: scale(1.02);
+}
 #apercu {
   flex: 1;
   border-radius: 12px;
@@ -61,6 +131,10 @@ main {
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
+#apercu:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-15px);
+}
 footer {
   background: linear-gradient(90deg, #445421, #4c332a);
   color: #fff;
@@ -68,4 +142,28 @@ footer {
   padding: 20px;
   margin-top: 40px;
   font-size: 15px;
+}
+footer a {
+  text-decoration: none;
+  color: #ffdc7c;
+  transition: 0.3s;
+}
+footer a:hover {
+  color: #f25555;
+  text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 15px;
+  }
+  #formulaire,
+  #apercu {
+    flex: 2;
+    padding: 15px;
+  }
+   nav a {
+    font-size: 12px;
+  }
 }
