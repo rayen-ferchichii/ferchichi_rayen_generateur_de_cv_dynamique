@@ -167,3 +167,19 @@ footer a:hover {
     font-size: 12px;
   }
 }
+.btn-ajouter { 
+  padding: 10px 20px;
+  background: #ffdc7c;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-ajouter:hover {
+  background: #9340ff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
