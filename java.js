@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
      evenementsformulaire();
      evenementsboutons();
+    document.getElementById('imprimer').addEventListener('click', imprimerCV);
+    synchronisationSimple()
 });
 function evenementsformulaire() {
     const champs = document.querySelectorAll("input, textarea, select");
@@ -253,4 +255,56 @@ function ajoutercentresinteret() {
             }
         }
     })
+}
+function imprimerCV(e) {
+    e.preventDefault();
+    const cvContent = document.querySelector('.resultatcv');
+    const pageOriginale = document.body.innerHTML;
+    document.body.innerHTML = cvContent.outerHTML;
+    window.print();
+    document.body.innerHTML = pageOriginale;
+    initialiserPage();
+}
+function initialiserPage() {
+    evenementsformulaire();
+    evenementsboutons();
+    document.getElementById('imprimer').addEventListener('click', imprimerCV);
+}
+
+function synchronisationSimple() {
+    const fieldsets = document.querySelectorAll('fieldset');
+    fieldsets.forEach(fieldset => {
+        fieldset.addEventListener('click', function() {
+            const legend = this.querySelector('legend').textContent;
+            let sectionCorrespondante;
+             if (legend.includes('Informations Personnelles')) {
+                sectionCorrespondante = document.querySelector('.infoperso');
+            } else if (legend.includes('Titre professionnel')) {
+                sectionCorrespondante = document.querySelector('.profilpro');
+            } else if (legend.includes('Formation')) {
+                sectionCorrespondante = document.querySelector('.formation');
+            } else if (legend.includes('Expérience')) {
+                sectionCorrespondante = document.querySelector('.experience');
+            } else if (legend.includes('Compétences')) {
+                sectionCorrespondante = document.querySelector('.competence');
+            } else if (legend.includes('Langues')) {
+                sectionCorrespondante = document.querySelector('.langue');
+            } else if (legend.includes('Soft Skills')) {
+                sectionCorrespondante = document.querySelector('.soft_skills');
+            } else if (legend.includes('Centres d\'intérêt')) {
+                sectionCorrespondante = document.querySelector('.centres_interet');
+            }
+    
+            if (sectionCorrespondante) {
+                sectionCorrespondante.scrollIntoView({
+                    behavior: 'smooth', 
+                    block: 'start'
+                });
+                sectionCorrespondante.style.backgroundColor = '#fff2e6';
+                setTimeout(() => {
+                    sectionCorrespondante.style.backgroundColor = '';
+                }, 1000);
+            }
+        });
+    });
 }

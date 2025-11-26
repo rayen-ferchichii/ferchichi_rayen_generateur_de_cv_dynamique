@@ -64,6 +64,8 @@ main {
   gap: 25px;
   padding: 40px 20px;
   margin: auto;
+  min-height: 120vh;
+  align-items: flex-start;
 }
 #formulaire {
   flex:1;
@@ -73,6 +75,8 @@ main {
   border: 2px solid #f3c27b;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
+  overflow-y: auto;
+  height: 120vh;
 }
 #formulaire:hover {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
@@ -96,6 +100,7 @@ fieldset {
   margin-bottom: 20px;
   background: #fafafa;
   transition: all 0.3s ease;
+  scroll-margin-top: 20px;
 }
 fieldset:hover {
   background: #fff2e6;
@@ -130,6 +135,9 @@ input:focus, textarea:focus, select:focus {
   border: 2px solid #d4e5a8;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
+  overflow-y: auto;
+  height: 120vh;
+  background: #ffffff;
 }
 #apercu:hover {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
@@ -140,7 +148,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 50px;
   font-size: 15px;
 }
 footer a {
@@ -183,3 +191,110 @@ footer a:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+#apercu * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.resultatcv {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.tetecv {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4c332a;
+}
+.tetecv h2 {
+    color: #4c332a;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+.cv_section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #4c332a;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    scroll-margin-top: 20px;
+}
+.cv_section h3 {
+    color: #4c332a;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    word-wrap: break-word;
+}
+.cv_section h4 {
+    color: #445421;
+    margin: 10px 0 5px 0;
+    word-wrap: break-word;
+}
+.cv_section p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+    white-space: normal;
+}
+.liste_info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    word-wrap: break-word;
+}
+.champ_info {
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+.item_liste {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.item_liste:last-child {
+    border-bottom: none;
+}
+.liste_skills, .liste_interet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.skill-tag, .interest-tag {
+    background: #4c332a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+.cv_action {
+    text-align: center;
+    margin-top: 30px;
+}
+.boutonimprim {
+    background: #4c332a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+.boutonimprim:hover {
+    background: #5a3f35;
+}
+@media print {
+    .boutonimprim {
+        display: none;
+    }
+} 
