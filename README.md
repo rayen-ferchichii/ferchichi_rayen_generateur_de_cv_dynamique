@@ -118,10 +118,13 @@ Ce projet a été réalisé dans le cadre du module *Développement Web* — FST
 
 - ## 🗂️ Structure du Projet
 generateur-cv-dynamique/
-│
+
 ├── index.html # Page principale avec structure HTML
+
 ├── style.css # Styles, responsive design et animations
+
 ├── java.js # Logique JavaScript et interactivité
+
 ├── README.md # Documentation du projet
 
 ## 👨‍💻 Auteur
